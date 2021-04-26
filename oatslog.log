@@ -1,0 +1,8 @@
+Fri, 09 Apr 2021 17:33:18 INFO     OATS log file
+Fri, 09 Apr 2021 17:33:18 INFO     Program started
+Fri, 09 Apr 2021 17:33:18 INFO     Solver selected: ipopt
+Fri, 09 Apr 2021 17:33:18 INFO     Testcase selected: /home/waqquas/Downloads/GBNetwork_Revised_Reduced_S1.xlsx
+Fri, 09 Apr 2021 17:33:18 INFO     Model selected: ACOPF
+Fri, 09 Apr 2021 17:33:18 INFO     Given model file found and selected from the models library
+Fri, 09 Apr 2021 17:33:19 INFO     Given testcase file found and selected from the testcase library
+Fri, 09 Apr 2021 17:33:36 INFO     Done!
