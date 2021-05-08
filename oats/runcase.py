@@ -47,34 +47,7 @@ def runcase(testcase,mod,opt=None):
     r = printdata(datfile,ptc,mod,opt)
     r.reducedata()
     r.printheader()
-    if 'UC' in mod:
-        r.printUCdat()
-    else:
-        r.printkeysets()
-        r.printnetwork()
-        #'OPF' or 'LF'
-        if 'OPF' in mod:
-            r.printOPF()
-        elif 'LF' in mod:
-            r.printLF()
-        #'AC' or 'DC'
-        if 'AC' in mod:
-            r.printAC()
-        elif 'DC' or 'SC' in mod:
-            r.printDC()
-
-        if mod=='ACLF':
-            r.printACLF()
-        elif mod=='DCOPF':
-            r.printDCOPF()
-        elif 'ACOPF' in mod:
-            r.printACOPF()
-        elif mod=='SCOPF' or mod=='SCOPF_BM':
-            r.printSCdat()
-        if mod=='ACOPF_BM':
-            r.printBM()
-        if mod=='DCOPF_BM' or mod=='SCOPF_BM':
-            r.printDCBM()
+    r.printdata()
 
 
 
@@ -99,11 +72,8 @@ def runcase(testcase,mod,opt=None):
         else:
             o.greet()
             o.solutionstatus()
-        if 'UC' in mod:
-            o.printUC()
-        else:
             o.printsummary()
-            o.printoutputxls()
+            # o.printoutputxls()
 
     else:
         instance       = model.create_instance(datfile)

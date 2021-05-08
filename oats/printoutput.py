@@ -41,9 +41,9 @@ class printoutput(object):
         print ("\n Summary")
         print ("***********")
         tab_summary = []
-        tab_summary.append(['Conventional generation (MW)','Wind generation (MW)', 'Demand (MW)'])
+        tab_summary.append(['Total generation (MW)', 'Demand (MW)'])
         tab_summary.append([sum(self.instance.pG[g].value for g in self.instance.G)*self.instance.baseMVA,\
-        sum(self.instance.pW[w].value for w in self.instance.WIND)*self.instance.baseMVA,sum(self.instance.PD[d] for d in self.instance.D)*self.instance.baseMVA])
+        sum(self.instance.PD[d] for d in self.instance.D)*self.instance.baseMVA])
         print (tabulate(tab_summary, headers="firstrow", tablefmt="grid"))
         print ("==============================================")
     def printoutputxls(self):

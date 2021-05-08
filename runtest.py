@@ -4,6 +4,6 @@ import oats
 # import os
 # pp_dir = os.path.dirname(os.path.realpath(__file__))
 #
-from oats.run import scopf,dcopf,acopf
+from oats.run import bmtransport
 
-acopf(neos=False,solver='ipopt',tc='/home/waqquas/Downloads/GBNetwork_Revised_Reduced_S1.xlsx')
+bmtransport(neos=False,solver='cplex',tc='tests/GB_ReducedNetwork_test.xlsx')
