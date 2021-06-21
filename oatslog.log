@@ -1,8 +1,8 @@
-Sat, 08 May 2021 12:05:26 INFO     OATS log file
-Sat, 08 May 2021 12:05:26 INFO     Program started
-Sat, 08 May 2021 12:05:26 INFO     Solver selected: cplex
-Sat, 08 May 2021 12:05:26 INFO     Testcase selected: tests/GB_ReducedNetwork_test.xlsx
-Sat, 08 May 2021 12:05:26 INFO     Model selected: BM_Transport
-Sat, 08 May 2021 12:05:26 INFO     Given model file found and selected from the models library
-Sat, 08 May 2021 12:05:29 INFO     Given testcase file found and selected from the testcase library
-Sat, 08 May 2021 12:05:29 INFO     Done!
+Mon, 21 Jun 2021 15:38:29 INFO     OATS log file
+Mon, 21 Jun 2021 15:38:29 INFO     Program started
+Mon, 21 Jun 2021 15:38:29 INFO     Solver selected: cplex
+Mon, 21 Jun 2021 15:38:29 INFO     Testcase selected: tests/GB_ReducedNetwork_test.xlsx
+Mon, 21 Jun 2021 15:38:29 INFO     Model selected: BM_Transport
+Mon, 21 Jun 2021 15:38:29 INFO     Given model file found and selected from the models library
+Mon, 21 Jun 2021 15:38:29 INFO     Given testcase file found and selected from the testcase library
+Mon, 21 Jun 2021 15:38:29 INFO     Done!

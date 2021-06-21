@@ -13,7 +13,7 @@ import pandas as pd
 
 def selecttestcase(test):
     data_flags = {'storage':1,'ts':1,'shunt':1}
-    xl = pd.ExcelFile(test,engine='openpyxl')
+    xl = pd.ExcelFile(test)
 
     df_bus         = xl.parse("zone")
     df_demand      = xl.parse("demand")

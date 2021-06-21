@@ -52,34 +52,18 @@ def runcase(testcase,mod,opt=None):
 
 
     ###############Solver settings####################
-    if (not opt['neos']):
+    optimise = SolverFactory(opt['solver'])
+    #################################################
 
-        optimise = SolverFactory(opt['solver'])
-        #opt.options['mipgap'] = 0.1
-        #################################################
-
-        ############Solve###################
-        instance = model.create_instance(datfile)
-        instance.dual = Suffix(direction=Suffix.IMPORT)
-        results = optimise.solve(instance,tee=True)
-        instance.solutions.load_from(results)
-        # ##################################
-        #
-        # ############Output###################
-        o = printoutput(results, instance,mod)
-        if (opt['out']):
-            o.solutionstatus()
-        else:
-            o.greet()
-            o.solutionstatus()
-            o.printsummary()
-            # o.printoutputxls()
-
-    else:
-        instance       = model.create_instance(datfile)
-        #solveroptions  = SolverFactory(opt['solver'])
-        solver_manager = SolverManagerFactory('neos')
-        print (dir(solver_manager.solve))
-        results        = solver_manager.solve(instance, opt=solveroptions)
-
-        print (results)
+    ############Solve###################
+    instance = model.create_instance(datfile)
+    instance.dual = Suffix(direction=Suffix.IMPORT)
+    results = optimise.solve(instance,tee=True)
+    instance.solutions.load_from(results)
+    # ##################################
+    #
+    # ############Output###################
+    o = printoutput(results, instance,mod)
+    o.greet()
+    o.solutionstatus()
+    o.printoutputxls()
